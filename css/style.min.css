@@ -156,7 +156,7 @@ h6 {
 .header {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 30px;
   left: 0;
   z-index: 100000;
   height: 80px;
@@ -183,7 +183,7 @@ h6 {
   z-index: 4;
   background: #fff;
   padding: 20px 36px;
-  border-radius: 100px;
+  border-radius: 32px;
 }
 .header__logo {
   position: relative;
@@ -839,6 +839,7 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-bottom: 24px;
 }
 .contacts__link p {
   font-weight: 600;
@@ -984,18 +985,18 @@ body {
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1560px;
   margin: 0 auto;
   z-index: 1000;
   height: 100%;
-  padding: 0 30px;
+  padding: 0 100px;
   position: relative;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1440px) {
   .header__btn {
-    font-size: 14px;
-    padding: 12.5px 25px;
+    font-size: 12px;
+    padding: 8px 20px;
   }
   .header__links a {
     font-size: 13px;
@@ -1010,6 +1011,55 @@ body {
     width: 20px;
     height: 20px;
   }
+  .intro {
+    height: 100vh;
+    border-radius: 0px 0px 32px 32px;
+  }
+  .intro h1 {
+    font-size: 60px;
+  }
+  .intro__item img {
+    height: 60%;
+    width: auto;
+    aspect-ratio: 1/1;
+  }
+  .intro__item.big h2 {
+    font-size: 28px;
+  }
+  .intro__row {
+    grid-template-rows: repeat(2, 180px);
+  }
+  .lider__advantage {
+    padding: 15px;
+  }
+  .lider__advantage p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .intro {
+    padding-top: 120px;
+  }
+  .intro h1 {
+    font-size: 32px;
+  }
+  .header__logo {
+    width: 80px;
+    height: 25px;
+  }
+  .header__btn {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+  .header__links a {
+    font-size: 11px;
+  }
+  .header__phone p:not(:last-child) {
+    font-size: 10px;
+  }
+  .header__phone p:last-child {
+    font-size: 10px;
+  }
   .lider__footer {
     flex-wrap: wrap;
   }
@@ -1020,18 +1070,37 @@ body {
   .form__info {
     flex: 1 1 auto;
   }
+  .reviews__letter {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .reviews__name p {
+    font-size: 20px;
+  }
+  .reviews__rating time {
+    font-size: 14px;
+  }
+  .reviews__stars {
+    font-size: 18px;
+  }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1150px) {
+  .header {
+    top: 20px;
+  }
   .header__row {
     justify-content: space-between;
   }
   .header__logo {
     margin: 0px;
+    height: 20px;
+    width: 68px;
   }
   .header__burger {
     display: block;
     position: relative;
-    width: 30px;
+    width: 32px;
     height: 20px;
     z-index: 4;
     order: 3;
@@ -1040,9 +1109,9 @@ body {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
-    top: 9px;
-    background: #f39200;
+    height: 3.5px;
+    top: 8px;
+    background: #373737;
   }
   .header__catalog {
     order: 8;
@@ -1051,7 +1120,7 @@ body {
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3.5px;
     left: 0;
     transition: all 300ms ease-out 0ms;
     z-index: 5;
@@ -1061,7 +1130,8 @@ body {
     top: 0;
   }
   .header__burger::after {
-    bottom: 0;
+    height: 2.8px;
+    bottom: 0px;
   }
   .header__menu {
     position: fixed;
@@ -1103,7 +1173,12 @@ body {
     width: 100%;
     text-align: center;
   }
-  h1 {
+}
+@media only screen and (max-width: 992px) {
+  .intro {
+    height: fit-content;
+  }
+  .intro h1 {
     font-size: 52px;
     line-height: 120%;
   }
@@ -1152,6 +1227,7 @@ body {
     flex: 1 1 auto;
     max-width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 8px;
   }
   .lider__advantage {
     aspect-ratio: 3.5/2.1;
@@ -1171,15 +1247,14 @@ body {
   .form__info p {
     font-size: 16px;
   }
-  .contacts .container {
-    padding: 0px;
-  }
   .contacts__row {
     flex-wrap: wrap;
   }
   .contacts__map {
     flex: 1 1 100%;
     aspect-ratio: 2/1;
+    border-radius: 16px;
+    overflow: hidden;
   }
   .contacts__info {
     flex: 1 1 auto;
@@ -1199,6 +1274,9 @@ body {
   .footer__item:last-child {
     order: 2;
     flex: 0 0 260px;
+  }
+  .footer__copy {
+    font-weight: 500 !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1254,6 +1332,9 @@ body {
     gap: 4px;
     font-size: 16px;
   }
+  .reviews__more {
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 450px) {
   .header__btn {
@@ -1302,7 +1383,7 @@ body {
   .intro__item:nth-child(4) {
     grid-column: span 4;
   }
-  h1 {
+  .intro h1 {
     font-size: 26px;
     line-height: 120%;
   }
@@ -1421,6 +1502,9 @@ body {
     width: 50px;
     height: 50px;
     right: 70px;
+  }
+  .contacts__link {
+    margin-bottom: 16px;
   }
   .footer__row {
     flex-direction: column;
