@@ -1124,6 +1124,7 @@ body {
   }
   h2 {
     font-size: 36px;
+    line-height: 1.2;
   }
   .lider__info {
     flex: 0 0 500px;
