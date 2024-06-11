@@ -993,7 +993,7 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1900px) {
   .container {
     max-width: 1215px;
     padding: 0px 30px;
