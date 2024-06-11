@@ -1270,7 +1270,7 @@ body {
     margin: 0px 20px 0px auto;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   .intro {
     height: fit-content;
     padding-bottom: 60px;
@@ -1373,14 +1373,17 @@ body {
     order: 3;
   }
   .footer__item:last-child {
+    max-width: 100%;
     order: 2;
-    flex: 0 0 45%;
+    flex: 1 1 45%;
     margin-left: auto;
   }
   .footer__copy {
     max-width: 206px;
     font-weight: 500 !important;
     margin-top: 0px;
+    font-size: 14px;
+    line-height: 18px;
   }
   .footer__copy * {
     font-weight: 500 !important;
@@ -1541,6 +1544,9 @@ body {
   .form__form .btn {
     max-width: 100%;
     width: 100%;
+  }
+  .form__info {
+    flex: 1 1 auto;
   }
   .form__info h2 {
     font-weight: 700;
@@ -1704,5 +1710,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
+  }
+  .checkbox p {
+    font-size: 10px;
   }
 }
